@@ -15,6 +15,7 @@ const NAV_LINKS = [
 
 const MORE_LINKS = [
   { label: 'About Us', href: '/about', flag: '' },
+  { label: 'Work With Us', href: '/work-with-us', flag: '' },
   { label: 'Zambia Campaign', href: '/campaigns/zambia', flag: '🇿🇲' },
   { label: 'Zimbabwe Campaign', href: '/campaigns/zimbabwe', flag: '🇿🇼' },
   { label: 'Documentation', href: '/docs', flag: '📖' },

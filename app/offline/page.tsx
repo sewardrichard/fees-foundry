@@ -108,25 +108,51 @@ export default function OfflinePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden">
 
             {/* Thermal Printer — wide */}
-            <div className="sm:col-span-2 bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Printer className="w-[18px] h-[18px] text-primary" />
+            <div className="sm:col-span-2 bg-[#07090E] hover:bg-white/[0.03] transition-colors cursor-default">
+              <div className="w-full h-48 sm:h-56 bg-[#0B0D13] overflow-hidden">
+                <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bundle-printer.svg`} alt="High-Speed Thermal Printer" className="w-full h-full object-cover" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">High-Speed Thermal Printer</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">
-                No ink required — ever. Built to handle your busiest enrollment days. Prints professional receipts in under <strong className="text-white/70">2 seconds</strong>.
-              </p>
+              <div className="p-7">
+                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Printer className="w-[18px] h-[18px] text-primary" />
+                </div>
+                <p className="font-bold text-[15px] text-white mb-1">High-Speed Thermal Printer</p>
+                <p className="text-[13px] text-white/50 leading-[1.6]">
+                  No ink required — ever. Built to handle your busiest enrollment days. Prints professional receipts in under <strong className="text-white/70">2 seconds</strong>.
+                </p>
+              </div>
             </div>
 
             {/* Paper Rolls */}
-            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Receipt className="w-[18px] h-[18px] text-primary" />
+            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors cursor-default">
+              <div className="w-full h-48 sm:h-56 bg-[#0B0D13] overflow-hidden">
+                <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bundle-paper-rolls.svg`} alt="10 Thermal Paper Rolls" className="w-full h-full object-cover" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">10 Starter Paper Rolls</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">
-                Standard 80×80mm thermal rolls. Everything you need to start printing on Day 1.
-              </p>
+              <div className="p-7">
+                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Receipt className="w-[18px] h-[18px] text-primary" />
+                </div>
+                <p className="font-bold text-[15px] text-white mb-1">10 Starter Paper Rolls</p>
+                <p className="text-[13px] text-white/50 leading-[1.6]">
+                  Standard 80×80mm thermal rolls. Everything you need to start printing on Day 1.
+                </p>
+              </div>
+            </div>
+
+            {/* Software + License — wide */}
+            <div className="sm:col-span-2 bg-[#07090E] hover:bg-white/[0.03] transition-colors cursor-default">
+              <div className="w-full h-48 sm:h-56 bg-[#0B0D13] overflow-hidden">
+                <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bundle-software.svg`} alt="SchoolFoundry Software with Lifetime License" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-7">
+                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Monitor className="w-[18px] h-[18px] text-primary" />
+                </div>
+                <p className="font-bold text-[15px] text-white mb-1">SchoolFoundry Software + Lifetime License</p>
+                <p className="text-[13px] text-white/50 leading-[1.6]">
+                  Full school management system pre-installed and ready to go. Runs on any Windows PC — no special hardware required. One-time payment, no monthly fees. Includes student tracking, fee management, reporting, and receipt printing.
+                </p>
+              </div>
             </div>
 
             {/* Lifetime License */}
@@ -137,17 +163,6 @@ export default function OfflinePage() {
               <p className="font-bold text-[15px] text-white mb-1">Lifetime License</p>
               <p className="text-[13px] text-white/50 leading-[1.6]">
                 One-time payment. You own your data forever. No hidden monthly fees, no subscriptions.
-              </p>
-            </div>
-
-            {/* Software — wide */}
-            <div className="sm:col-span-2 bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Monitor className="w-[18px] h-[18px] text-primary" />
-              </div>
-              <p className="font-bold text-[15px] text-white mb-1">SchoolFoundry Software</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">
-                Full school management system pre-installed and ready to go. Runs on any Windows PC — no special hardware required. Includes student tracking, fee management, reporting, and receipt printing.
               </p>
             </div>
 
