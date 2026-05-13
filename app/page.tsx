@@ -272,19 +272,16 @@ export default function Home() {
               <p className="text-[13px] text-white/50 leading-[1.6]">
                 Complete financial control. Generate invoices, track arrears, and accept fee payments directly via <strong className="text-white/70">Bank Cards</strong> or <strong className="text-white/70">Mobile Money</strong> (EcoCash, Momo, M-Pesa). The system also generates <strong className="text-white/70">receipts for cash payments</strong> instantly. Built-in reporting ensures your books are always balanced.
               </p>
-              <div className="flex flex-wrap items-center gap-2 mt-4">
-                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold bg-[#00A651]/10 text-[#00A651] rounded px-2 py-1">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#00A651"/><text x="12" y="16" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold" fontFamily="Arial">E</text></svg>
-                  EcoCash
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold bg-[#FFCC08]/10 text-[#FFCC08] rounded px-2 py-1">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#FFCC08"/><text x="12" y="16" textAnchor="middle" fill="#003C71" fontSize="11" fontWeight="bold" fontFamily="Arial">M</text></svg>
-                  Momo
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold bg-[#4CAF50]/10 text-[#4CAF50] rounded px-2 py-1">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><rect x="1" y="4" width="22" height="16" rx="4" fill="#4CAF50"/><text x="12" y="16" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="Arial">M</text></svg>
-                  M-Pesa
-                </span>
+              <div className="flex flex-wrap items-center gap-3 mt-5">
+                <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-10">
+                  <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/ecocash-logo.png`} alt="EcoCash" className="h-6 w-auto object-contain" />
+                </div>
+                <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-10">
+                  <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/momo-logo.png`} alt="MTN MoMo" className="h-6 w-auto object-contain" />
+                </div>
+                <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-10">
+                  <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/mpesa-logo.png`} alt="M-Pesa" className="h-6 w-auto object-contain" />
+                </div>
                 <span className="inline-flex items-center gap-1.5 text-[10px] font-bold bg-blue-500/10 text-blue-500 rounded px-2 py-1">
                   <CreditCard className="w-3.5 h-3.5" />
                   Bank Cards
@@ -439,18 +436,29 @@ export default function Home() {
 
             {/* Left — selling points */}
             <div className="bg-[#07090E] p-7 sm:p-10 flex flex-col justify-center">
+              <div className="flex items-center gap-3 mb-8">
+                <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`} alt="SchoolFoundry" className="w-10 h-10" />
+                <div>
+                  <p className="text-white font-bold text-[16px] leading-tight">SchoolFoundry</p>
+                  <p className="text-white/40 text-[11px]">School Management System</p>
+                </div>
+              </div>
               <div className="space-y-5">
                 {[
                   'One-off payment—no annoying monthly bills',
                   'Works offline. No internet? No problem.',
                   'Simple setup—no IT degree required',
                   'Friendly guides included to help you along',
+                  'Trusted by schools across Southern Africa',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-white/70 font-bold text-[14px]">
                     <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs flex-shrink-0">✓</div>
                     {item}
                   </div>
                 ))}
+              </div>
+              <div className="mt-8 pt-6 border-t border-white/5">
+                <p className="text-white/30 text-[12px] leading-[1.6]">Have questions? Reach out and our team will walk you through everything — from setup to your first receipt print.</p>
               </div>
             </div>
 
@@ -460,26 +468,26 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-bold text-white/40 uppercase tracking-widest">School Name</label>
-                    <Input data-testid="input-school-name" className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-primary transition-all" placeholder="e.g. Riverside High School" />
+                    <Input data-testid="input-school-name" className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-primary transition-all placeholder:text-white/15" placeholder="e.g. Riverside High School" />
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-bold text-white/40 uppercase tracking-widest">Your Name</label>
-                    <Input data-testid="input-your-name" className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-primary transition-all" placeholder="e.g. Themba Moyo" />
+                    <Input data-testid="input-your-name" className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-primary transition-all placeholder:text-white/15" placeholder="e.g. Themba Moyo" />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-bold text-white/40 uppercase tracking-widest">Email Address</label>
-                    <Input data-testid="input-email" type="email" className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-primary transition-all" placeholder="bursar@yourschool.com" />
+                    <Input data-testid="input-email" type="email" className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-primary transition-all placeholder:text-white/15" placeholder="bursar@yourschool.com" />
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-bold text-white/40 uppercase tracking-widest">Phone Number</label>
-                    <Input data-testid="input-phone" className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-primary transition-all" placeholder="Best number to reach you on" />
+                    <Input data-testid="input-phone" className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-primary transition-all placeholder:text-white/15" placeholder="Best number to reach you on" />
                   </div>
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-[11px] font-bold text-white/40 uppercase tracking-widest">How can we help?</label>
-                  <Textarea data-testid="textarea-school-info" className="bg-white/5 border-white/10 text-white min-h-[100px] rounded-xl focus:border-primary transition-all resize-none" placeholder="Tell us a little about your school—how many students do you have?" />
+                  <Textarea data-testid="textarea-school-info" className="bg-white/5 border-white/10 text-white min-h-[100px] rounded-xl focus:border-primary transition-all resize-none placeholder:text-white/15" placeholder="Tell us a little about your school—how many students do you have?" />
                 </div>
                 <Button data-testid="button-submit-demo" className="w-full h-14 text-base font-bold rounded-xl bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all">
                   Request a Friendly Demo
