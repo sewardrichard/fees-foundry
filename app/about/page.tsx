@@ -94,8 +94,8 @@ export default function AboutPage() {
             {/* Story image */}
             <div className="bg-[#0B0D13] overflow-hidden">
               <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/offline-bundle.jpg`}
-                alt="SchoolFoundry being used in a school"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/file-cabinet.jpg`}
+                alt="Overflowing file cabinet — the paper-based system SchoolFoundry replaces"
                 className="w-full h-full object-cover min-h-[300px]"
               />
             </div>
