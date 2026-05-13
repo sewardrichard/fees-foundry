@@ -17,7 +17,13 @@ import {
   ArrowRight,
   Bot,
   MonitorSmartphone,
-  Info
+  Info,
+  Calendar,
+  MessageSquare,
+  CreditCard,
+  Smartphone,
+  ClipboardList,
+  ShieldCheck
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -250,7 +256,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-3xl font-black text-white mb-4 tracking-tight">Online Cloud</h3>
                   <p className="text-white/50 text-lg leading-relaxed mb-8">
-                    Manage your school from any device, any time. Our cloud version handles payments, parent queries using AI on WhatsApp, automatically generates statements on request, and much more.
+                    Manage your school from any device. Our cloud version includes the full SIS suite, gradebooks, attendance, and integrated payments via WhatsApp, Card, and Mobile Money.
                   </p>
                 </div>
                 <div className="relative z-10 mt-auto px-10 pb-10 flex items-center gap-3 text-primary font-bold text-lg group-hover:translate-x-2 transition-transform">
@@ -278,99 +284,146 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden">
 
-            {/* Wide card — Student Records */}
-            <div className="sm:col-span-2 bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 flex flex-col sm:flex-row sm:items-center gap-6 cursor-default">
-              <div className="flex-1">
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Users className="w-[18px] h-[18px] text-primary" />
-                </div>
-                <p className="font-bold text-[15px] text-white mb-1">Student Records &amp; Enrollment</p>
-                <p className="text-[13px] text-white/50 leading-[1.6]">A permanent digital file for every learner — from first day to final grade. Add new students in under a minute and never lose a record again.</p>
-                <div className="flex gap-6 mt-3">
-                  <div className="flex flex-col">
-                    <span className="text-[22px] font-black text-primary leading-none">90%</span>
-                    <span className="text-[11px] text-white/50 mt-0.5">less paperwork</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-[22px] font-black text-primary leading-none">1-click</span>
-                    <span className="text-[11px] text-white/50 mt-0.5">backups</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Fraud-Proof Invoicing */}
+            {/* Admissions & Enrollment — OFFLINE */}
             <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <ReceiptText className="w-[18px] h-[18px] text-primary" />
+                <FileText className="w-[18px] h-[18px] text-primary" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">Fraud-Proof Invoicing</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">Automated billing for fees, levies, and extras. Every cent is tracked — no edits, no gaps, no &quot;I forgot to write it down.&quot;</p>
+              <p className="font-bold text-[15px] text-white mb-1">Admissions & Enrollment</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Digital applications, automated approval workflows, and onboarding processes to manage new intake.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-emerald-500/10 text-emerald-500 rounded px-2 py-0.5 mt-2.5">Offline Version</span>
             </div>
 
-            {/* Instant Receipts */}
+            {/* Security & User Management — OFFLINE */}
             <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Printer className="w-[18px] h-[18px] text-primary" />
+                <ShieldCheck className="w-[18px] h-[18px] text-primary" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">Instant Receipts &amp; Statements</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">Print thermal receipts on the spot or generate a full statement for any student in seconds. No digging through books.</p>
+              <p className="font-bold text-[15px] text-white mb-1">Security & User Management</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Configurable roles and permissions to ensure data privacy and system security.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-emerald-500/10 text-emerald-500 rounded px-2 py-0.5 mt-2.5">Offline Version</span>
             </div>
 
-            {/* Principal's Dashboard */}
+            {/* 100% Offline Resilience — OFFLINE (NEW) */}
             <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <BarChart3 className="w-[18px] h-[18px] text-primary" />
+                <Cpu className="w-[18px] h-[18px] text-primary" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">Principal&apos;s Dashboard</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">A live view of your school&apos;s health — finances, attendance, and academic progress at a glance, without running a single report manually.</p>
+              <p className="font-bold text-[15px] text-white mb-1">100% Offline Resilience</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Built for the most challenging environments. Works **100% without internet**—record students and take payments anywhere.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-emerald-500/10 text-emerald-500 rounded px-2 py-0.5 mt-2.5">Offline Version</span>
             </div>
 
-            {/* Staff Permissions */}
-            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
+            {/* Finance & Billing — LIMITED (ROW SPAN 2) */}
+            <div className="lg:row-span-2 bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default flex flex-col border-l border-white/10 lg:border-l-0">
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Lock className="w-[18px] h-[18px] text-primary" />
+                <CreditCard className="w-[18px] h-[18px] text-primary" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">Staff Permissions &amp; Audit Trails</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">Control exactly who can see, edit, or approve. Every action is logged — so accountability isn&apos;t a question, it&apos;s a record.</p>
+              <p className="font-bold text-[15px] text-white mb-1">Finance & Payments</p>
+              <p className="text-[13px] text-white/50 leading-[1.6] flex-1">
+                Complete financial control. Generate invoices and accept payments via **Cash (with instant receipts)**, **Bank Cards**, or **Mobile Money**.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-6">
+                 <div className="flex items-center gap-1.5 bg-green-500/10 text-green-500 rounded px-2 py-1">
+                   <div className="w-2 h-2 rounded-full bg-green-500" />
+                   <span className="text-[10px] font-bold">M-Pesa</span>
+                 </div>
+                 <div className="flex items-center gap-1.5 bg-yellow-500/10 text-yellow-500 rounded px-2 py-1">
+                   <div className="w-2 h-2 rounded-full bg-yellow-500" />
+                   <span className="text-[10px] font-bold">Momo</span>
+                 </div>
+                 <div className="flex items-center gap-1.5 bg-blue-500/10 text-blue-500 rounded px-2 py-1">
+                   <div className="w-2 h-2 rounded-full bg-blue-500" />
+                   <span className="text-[10px] font-bold">Ecocash</span>
+                 </div>
+                 <div className="flex items-center gap-1.5 bg-primary/10 text-primary rounded px-2 py-1">
+                   <span className="text-[10px] font-bold">Bank Cards</span>
+                 </div>
+                 <div className="flex items-center gap-1.5 bg-white/10 text-white rounded px-2 py-1">
+                   <span className="text-[10px] font-bold">Cash Receipts</span>
+                 </div>
+                 <span className="text-[10px] font-bold bg-orange-500/10 text-orange-500 rounded px-2 py-0.5 border border-orange-500/20 w-full mt-1">Limited in Offline Version</span>
+              </div>
             </div>
 
-            {/* Academic History */}
-            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <GraduationCap className="w-[18px] h-[18px] text-primary" />
-              </div>
-              <p className="font-bold text-[15px] text-white mb-1">Academic History</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">Track grades, achievements, and progression for every learner across every term. A complete picture, always available.</p>
-            </div>
-
-            {/* AI Parent Assistant — Cloud Only */}
+            {/* AI Parent Assistant — ONLINE (Priority) */}
             <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                 <Bot className="w-[18px] h-[18px] text-primary" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">AI Parent Assistant</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">Parents ask questions, the AI answers. Statement requests, fee balances, and school info handled automatically — without pulling your staff away.</p>
-              <span className="inline-block text-[10px] font-medium tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Cloud only</span>
+              <p className="font-bold text-[15px] text-white mb-1">AI School Assistant</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Knows everything about your school. Parents can check **account statements** and **pay fees** via M-Pesa, Momo, Ecocash, or Bank Card instantly.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Online Version</span>
             </div>
 
-            {/* Live Cloud Reports — Cloud Only */}
+            {/* Student Information Management (SIS) — ONLINE */}
+            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <Users className="w-[18px] h-[18px] text-primary" />
+              </div>
+              <p className="font-bold text-[15px] text-white mb-1">Student Information (SIS)</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Centralized profiles storing academic records, attendance history, behavioral data, and documentation.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Online Version</span>
+            </div>
+
+            {/* Attendance & Scheduling — ONLINE */}
+            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <Calendar className="w-[18px] h-[18px] text-primary" />
+              </div>
+              <p className="font-bold text-[15px] text-white mb-1">Attendance & Scheduling</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Easy daily tracking and automated timetable management for classes, staff, and exams.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Online Version</span>
+            </div>
+
+            {/* Gradebook & Academic Reporting — ONLINE */}
+            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <ClipboardList className="w-[18px] h-[18px] text-primary" />
+              </div>
+              <p className="font-bold text-[15px] text-white mb-1">Gradebook & Reporting</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Digital recording of grades, progress tracking, and automated report card generation.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Online Version</span>
+            </div>
+
+            {/* Communication Portal — ONLINE */}
+            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <MessageSquare className="w-[18px] h-[18px] text-primary" />
+              </div>
+              <p className="font-bold text-[15px] text-white mb-1">Communication Portal</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Integrated messaging, SMS alerts, and app notifications for students, parents, and teachers.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Online Version</span>
+            </div>
+
+            {/* Parent & Student Portals — ONLINE */}
+            <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <Smartphone className="w-[18px] h-[18px] text-primary" />
+              </div>
+              <p className="font-bold text-[15px] text-white mb-1">Parent & Student Access</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Secure mobile-friendly portals for viewing grades, timetables, attendance, and fee invoices.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Online Version</span>
+            </div>
+
+            {/* Staff & Teacher Portals — ONLINE */}
             <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                 <MonitorSmartphone className="w-[18px] h-[18px] text-primary" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">Live Cloud Reports</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">Access real-time school data from any device, anywhere. Check term performance or financial summaries without setting foot in the office.</p>
-              <span className="inline-block text-[10px] font-medium tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Cloud only</span>
+              <p className="font-bold text-[15px] text-white mb-1">Staff & Teacher Portals</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Dedicated interfaces for managing materials, taking attendance, and entering grades.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Online Version</span>
             </div>
 
-            {/* Bank-Level Security */}
+            {/* Reporting & Analytics — ONLINE */}
             <div className="bg-[#07090E] hover:bg-white/[0.03] transition-colors p-7 cursor-default">
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Database className="w-[18px] h-[18px] text-primary" />
+                <BarChart3 className="w-[18px] h-[18px] text-primary" />
               </div>
-              <p className="font-bold text-[15px] text-white mb-1">Bank-Level Security &amp; Backups</p>
-              <p className="text-[13px] text-white/50 leading-[1.6]">Encrypted by default. One-click backups mean your data is always safe — whether the power cuts or the laptop walks away.</p>
+              <p className="font-bold text-[15px] text-white mb-1">Reporting & Analytics</p>
+              <p className="text-[13px] text-white/50 leading-[1.6]">Real-time data reporting to support decision-making for leadership teams.</p>
+              <span className="inline-block text-[10px] font-bold tracking-wider uppercase bg-blue-500/10 text-blue-500 rounded px-2 py-0.5 mt-2.5">Online Version</span>
             </div>
 
           </div>
@@ -378,7 +431,7 @@ export default function Home() {
           {/* Bottom info bar */}
           <div className="mt-6 px-5 py-4 bg-white/[0.03] rounded-xl flex items-center gap-4 text-[13px] text-white/50">
             <Info className="w-4 h-4 text-primary flex-shrink-0" />
-            <span><strong className="text-white/70 font-medium">Every version</strong> includes enrollment, invoicing, receipts, staff controls, academic history, and encrypted backups. <strong className="text-white/70 font-medium">Cloud Only</strong> features require the Online Cloud plan.</span>
+            <span><strong className="text-white/70 font-medium">Full Suite:</strong> SIS, Admissions, Attendance, Gradebook, Finance, Communication Portal, and Staff/Parent Portals are standard. Payments supported via WhatsApp, Card, and Mobile Money.</span>
           </div>
         </div>
       </section>
