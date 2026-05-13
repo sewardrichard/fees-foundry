@@ -41,6 +41,7 @@ export default function Footer() {
                 { label: 'Offline Bundle', href: '/offline' },
                 { label: 'Cloud Version', href: '/online' },
                 { label: 'About Us', href: '/about' },
+                { label: 'Work With Us', href: '/work-with-us' },
                 { label: 'Request Demo', href: '/#contact' },
               ].map(({ label, href }) => (
                 <Link key={label} href={href} className="hover:text-primary transition-all duration-300 flex items-center gap-2 group">

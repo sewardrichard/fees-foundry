@@ -40,8 +40,8 @@ export default function CloudPage() {
   return (
     <div className="min-h-screen bg-[#07090E] selection:bg-primary/30 selection:text-white overflow-x-hidden">
 
-      {/* ── Sticky Coming Soon Banner ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 via-blue-500 to-primary py-2.5 text-center">
+      {/* ── Coming Soon Banner (below nav, not overlapping) ── */}
+      <div className="mt-[72px] sm:mt-[80px] bg-gradient-to-r from-blue-600 via-blue-500 to-primary py-2.5 text-center">
         <div className="container mx-auto px-4 flex items-center justify-center gap-2 text-white text-sm font-bold">
           <Construction className="w-4 h-4" />
           <span>Cloud Version — Coming Soon</span>
@@ -50,7 +50,7 @@ export default function CloudPage() {
       </div>
 
       {/* ── Hero Section ── */}
-      <section className="relative pt-36 pb-16 sm:pt-44 sm:pb-24 overflow-hidden">
+      <section className="relative pt-12 pb-16 sm:pt-16 sm:pb-24 overflow-hidden">
         <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(59,130,246,0.12),transparent_70%)] pointer-events-none blur-3xl" />
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -85,8 +85,8 @@ export default function CloudPage() {
             {/* Right — hero image */}
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.8 }}>
               <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/online-cloud.jpg`}
-                alt="SchoolFoundry Cloud — manage your school from any device"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/school-office-paperwork.jpg`}
+                alt="School office overwhelmed with paperwork — the problem SchoolFoundry Cloud solves"
                 className="w-full rounded-3xl shadow-2xl shadow-blue-500/10 border border-white/5"
               />
             </motion.div>
